@@ -5,20 +5,14 @@ import '../App.css'
 
 
 
-function Profile({ fullName, bio, profession, handleName,children }) {
+function Profile({ children }) {
   const stylesObject = { color: "blue", textAlign: "center" };
   return <div style={stylesObject}>
 
-      <h3>{fullName}</h3>
-      <p>{bio}</p>
-      <p>{profession}</p> 
-      <img class ='mypic'src={pic} alt='pic'/>
-      
-      <br/>
+      <div>{children}</div>
+     
 
-      <button onClick={handleName}>
-          Click me
-      </button>
+     
   </div>;
 }
 Profile.defaultProps = {
@@ -27,6 +21,7 @@ Profile.defaultProps = {
   profession: "profession",
   children:{pic}
 }
+
 Profile.propTypes = {
   fullName: PropTypes.bool,
   bio: PropTypes.string,
